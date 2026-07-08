@@ -1,9 +1,7 @@
 import { useState,useEffect } from "react";
 import styles from "./video_maker.module.css";
 import VideoTree from "./video_tree";
-import AudioProfile from "./audio_profile";
 import AudioSelector from "./audio_selector";
-import ImageProfile from "./image_profile";
 import DragAndDropProfile from "./DragAndDrop_profile";
 import VideoNameSelector from "./video_name_selector";
 

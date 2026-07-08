@@ -1,7 +1,7 @@
 import { useState,useEffect } from "react";
 import styles from "./video_creator_main.module.css"
-import VideoMaker from "../common/video_maker"
-import ChunkedUploader from "../common/file_upload_chunk"
+import VideoMaker from "./video_maker"
+import ChunkedUploader from "./file_upload_chunk"
 import ImageViewer from "haru-reactjs-component-imageViewer"
 
 import api from "haru-service-api";

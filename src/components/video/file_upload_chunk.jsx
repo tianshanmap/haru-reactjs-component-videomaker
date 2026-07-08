@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import styles from './file_upload_form.module.css';
+import styles from './file_upload_chunk.module.css';
 
 // import {
 //   chunkUpload,
