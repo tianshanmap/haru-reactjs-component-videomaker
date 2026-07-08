@@ -1,12 +1,13 @@
 import { useState,useEffect } from "react";
-import styles from "./video_creator_main.module.css"
+import styles from "./video_creator.module.css"
 import VideoMaker from "./video_maker"
 import ChunkedUploader from "./file_upload_chunk"
+import AudioList from "./audiolist"
 import ImageViewer from "haru-reactjs-component-imageViewer"
 
 import api from "haru-service-api";
 
-const VideoCreatorMain = () => {
+const VideoCreator = () => {
   const [targetUploadPath,setTargetUploadPath] = useState("");
   const [isFileUploadOpen,setIsFileUploadOpen] = useState(false);
   const [isVideoMakerOpen,setIsVideoMakerOpen] = useState(false);
@@ -87,4 +88,4 @@ const VideoCreatorMain = () => {
     </div>  
   );
 }
-export default VideoCreatorMain;
+export default VideoCreator;

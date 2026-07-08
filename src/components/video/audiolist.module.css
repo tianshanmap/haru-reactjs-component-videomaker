@@ -1,0 +1,32 @@
+
+.audio_list_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-width: 10px;
+  background-color: rgb(214, 206, 206);
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  box-shadow: 50px 50px 70px rgba(12, 0, 0, 0.9);
+}
+
+.audio_table {
+  flex-grow: 2;
+  width: max-content;        /* Shrinks table width strictly to content size */
+  border-collapse: collapse; /* Eliminates the default spacing between borders */
+  border-spacing: 0;         /* Ensures no extra gap remains between cells */
+}
+
+.audio_table th, td {
+  padding-top: 1px; /* Minimizes vertical space inside cells */
+  padding-bottom: 1px; /* Minimizes vertical space inside cells */
+  padding-left: 5px; /* Minimizes vertical space inside cells */
+  padding-right: 5px; /* Minimizes vertical space inside cells */
+  line-height: 0.9; /* Tightens the space between text lines */
+  white-space: nowrap;       /* Prevents text from breaking onto multiple lines */
+}
+.audio_table, th, td {
+  border: none !important;      /* Removes all line borders */
+}
