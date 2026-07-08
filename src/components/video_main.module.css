@@ -22,4 +22,9 @@
   margin-right: auto;
   flex-grow : 1;
 }
-
+.video_buttons {
+  display: flex;
+  gap: 10px;
+  background-color: white;
+  padding-left: 20px;
+}
