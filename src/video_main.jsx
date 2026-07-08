@@ -8,7 +8,7 @@ export default function VideoMain() {
 
   return (
     <div>
-      <nav>
+      <div>
         {/* Buttons that act like links */}
         <button 
           onClick={() => setCurrentView('home')} 
@@ -29,7 +29,7 @@ export default function VideoMain() {
         >
           Video List
         </button>
-      </nav>
+      </div>
 
       <main>
         {/* Render the component based on current state */}
