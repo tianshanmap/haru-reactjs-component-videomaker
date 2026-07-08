@@ -1,7 +1,7 @@
 import './App.css'
 import Header from './components/header.jsx'
 import Footer from './components/footer.jsx'
-import VideoMain from './components/video/video_main.jsx'
+import VideoMain from './video_main.jsx'
 import { BrowserRouter as Router, Routes, Route,useNavigate } from 'react-router-dom';
 
 const Home = () => {

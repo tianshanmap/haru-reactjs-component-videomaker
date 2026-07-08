@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import VideoCreator from './video_creator';
-import AudioList from './audiolist';
-import VideoList from './videolist';
+import VideoCreator from './components/video/video_creator';
+import AudioList from './components/video/audiolist';
+import VideoList from './components/video/videolist';
 export default function VideoMain() {
   // Track which component to show
   const [currentView, setCurrentView] = useState('home');
