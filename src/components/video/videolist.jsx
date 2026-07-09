@@ -35,6 +35,17 @@ const VideoList = () => {
   setIsPlayerOpen(false);
   setIsVideoListOpen(true);
  }
+ const to_mb = (bytes) => {
+    const mb = bytes / (1024 ** 2);
+    return mb.toFixed(2) + ' MB';
+  } 
+ const MB_PER_MINUTE = 300/15.38; 
+ const estimateMinutes = (bytes) => {
+    const mb = bytes / (1024 ** 2);
+    if (mb <= 0) return 0;
+    return (mb / MB_PER_MINUTE).toFixed(2);
+ }
+
   return (
     <div className="main">
       {isVideoListOpen &&
@@ -44,16 +55,18 @@ const VideoList = () => {
                 <tr>
                   <th></th>
                   <th></th>
+                  <th></th>
                   </tr>
             </thead>
             <tbody>
                 {/* 2. Use .map() to loop through the array and return table rows */}
                 {data.files.map((item) => (
                 <tr>
-                    <td>{item.name}</td>
                     <td>
-                      <button name={item.path} parent={item.parent_path} onClick={handlePlay} className={styles.link_button}>Play</button>&nbsp;&nbsp;
+                      <button name={item.path} parent={item.parent_path} onClick={handlePlay} className={styles.link_button}>Play :: {item.name}</button>
                     </td>
+                    <td>{to_mb(item.size)}</td>
+                    <td>{estimateMinutes(item.size)}Min</td>
                 </tr>
                 ))}
             </tbody>
