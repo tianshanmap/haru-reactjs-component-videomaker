@@ -9,7 +9,7 @@ export default function VideoMain() {
   const [currentView, setCurrentView] = useState('home');
 
   return (
-    <div>
+    <div className="main">
       <div className={styles.video_buttons}>
         {/* Buttons that act like links */}
         <button 
@@ -32,15 +32,12 @@ export default function VideoMain() {
           Video List
         </button>
       </div>
-
-      <main>
-        <div className={styles.video_main}>
+      <div className={styles.video_main}>
           {/* Render the component based on current state */}
           {currentView === 'home' && <VideoCreator />}
           {currentView === 'audiolist' && <AudioList />}
           {currentView === 'videolist' && <VideoList />}
-        </div>
-      </main>
+      </div>
     </div>
   );
 }
