@@ -55,37 +55,35 @@ const VideoCreator = () => {
 
   // console.log("styles.div_image_cmd=" + styles.div_image_cmd);
   return (
-    <div className="main">
-        <div className={styles.video_creator_container}>
-          {isFileUploadOpen &&
-              <ChunkedUploader 
-                title="Upload compressed photoes for making video"
-                name={targetUploadPath}
-                accept_type=".gz,.zip"
-                onComplete={handleFileUpload}
+      <div className={styles.video_creator_container}>
+        {isFileUploadOpen &&
+            <ChunkedUploader 
+              title="Upload compressed photoes for making video"
+              name={targetUploadPath}
+              accept_type=".gz,.zip"
+              onComplete={handleFileUpload}
+            />  
+        }
+        {isImageOpen && 
+            <div className={styles.video_creator_image}>
+              <ImageViewer 
+                name={name}
+                list={list}
+                onContinue={handleOpenVideoMaker}
+                onExit={handleExit}
+                getViewEndPoint={api.getViewEndPoint}
               />  
-          }
-          {isImageOpen && 
-              <div className={styles.video_creator_image}>
-                <ImageViewer 
-                  name={name}
-                  list={list}
-                  onContinue={handleOpenVideoMaker}
-                  onExit={handleExit}
-                  getViewEndPoint={api.getViewEndPoint}
-                />  
-              </div>
-          }
-          {isVideoMakerOpen && 
-              <div className={styles.video_creator_maker}>
-                <VideoMaker 
-                  image_path={parentName}
-                  onExit={handleExit}
-                />
-              </div>
-          }          
-        </div>
-    </div>  
+            </div>
+        }
+        {isVideoMakerOpen && 
+            <div className={styles.video_creator_maker}>
+              <VideoMaker 
+                image_path={parentName}
+                onExit={handleExit}
+              />
+            </div>
+        }          
+      </div>
   );
 }
 export default VideoCreator;

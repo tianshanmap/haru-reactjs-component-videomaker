@@ -34,10 +34,12 @@ export default function VideoMain() {
       </div>
 
       <main>
-        {/* Render the component based on current state */}
-        {currentView === 'home' && <VideoCreator />}
-        {currentView === 'audiolist' && <AudioList />}
-        {currentView === 'videolist' && <VideoList />}
+        <div className={styles.video_main}>
+          {/* Render the component based on current state */}
+          {currentView === 'home' && <VideoCreator />}
+          {currentView === 'audiolist' && <AudioList />}
+          {currentView === 'videolist' && <VideoList />}
+        </div>
       </main>
     </div>
   );

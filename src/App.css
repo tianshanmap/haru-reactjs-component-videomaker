@@ -1,3 +1,14 @@
+body {
+  /* Ensure the body fills the entire screen height */
+  min-height: 100dvh; 
+  margin: 0;
+  
+  /* Establish a grid layout */
+  display: grid;
+  /* Header and footer adapt to content, Main (1fr) expands to take the rest */
+  grid-template-rows: auto 1fr auto; 
+}
+
 .container {
   display: flex;
   flex-direction: column;

@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: rgb(251, 249, 249);
 }
 .video_creator_fileupload {
   display: block;
