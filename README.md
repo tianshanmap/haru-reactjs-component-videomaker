@@ -11,5 +11,7 @@ npm run dev
 npm install react-router-dom
 ```
 # Install other component
+```
 npm install https://github.com/tianshanmap/haru-service-api
 npm install https://github.com/tianshanmap/haru-reactjs-component-imageViewer 
+```
